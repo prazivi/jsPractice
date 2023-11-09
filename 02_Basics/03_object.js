@@ -36,7 +36,7 @@ console.log(Jsuser.greeting)//when we remove freezee then ([Function (anonymous)
 console.log(Jsuser.greeting())//Hello Js user
 console.log(Jsuser.greeting2())
 
-
+console.log("Pranav");
 
 // Summary
  /*
