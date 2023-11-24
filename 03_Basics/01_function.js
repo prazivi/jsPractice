@@ -13,7 +13,7 @@ function addTwoNumbers(number1, number2){
 }
 
 const result = addTwoNumbers(3,4)//7
-console.log(result); 
+console.log(result); // undefined as output
 
 function loginUserMessage(username = "sam"){
     if(!username){
