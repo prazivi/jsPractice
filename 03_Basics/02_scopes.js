@@ -106,7 +106,7 @@ if (true) {
 // ++++++++++++++++++ interesting ++++++++++++++++++
 
 
-console.log(addone(5))
+console.log(addone(5))// Hoisting 
 
 function addone(num){
     return num + 1
@@ -114,7 +114,7 @@ function addone(num){
 
 
 
-addTwo(5)
+addTwo(5)// reference error bcz added in a variable
 const addTwo = function(num){
     return num + 2
 }
