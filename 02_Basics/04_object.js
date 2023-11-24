@@ -59,15 +59,15 @@ const course = {
     courseInsturctor: "pranav"
 }
 
-// course.courseInsturctor
+// course.courseInsturctor  :: if u want to get some value
 
 const {courseInsturctor: ins} = course
-console.log(ins);
+console.log(ins);//pranav
 
 
 
 // const navbar = ({company}) => {
-
+// here we are doing  destructuring react thing 
 // }
 
 // navbar(company = "pranav")
@@ -76,7 +76,7 @@ console.log(ins);
 
 //json
 // {
-//     "name" : "prnava",
+//     "name" : "pranav",
 //     "coursename": "js in hindi",
 //     "price": "free"
 // }
