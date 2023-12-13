@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApiRequest</title>
+</head>
+<body style="background-color: #b18a8a; ">
+    <div id="userInfo">
+        <img id="userPhoto" alt="User Photo">
+        <p id="followersCount"></p>
+        <p id="repositoriesCount"></p>
+    </div>
+    
+</body>
+
+<script>
+  const reqUrl = 'https://api.github.com/users/prazivi';
+        const xhr = new XMLHttpRequest();//XMLhttpRequest is a method inside which there are states which allowsyou to req api
+
+
+        xhr.open('GET', reqUrl);// sending request(we need to call it as well as)
+        //Onreadystate monitor the state
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(xhr.responseText);
+
+                // Extracting photo, followers, and repositories
+                const photoUrl = data.avatar_url;
+                const followersCount = data.followers;
+                const repositoriesCount = data.public_repos;
+
+                // Update DOM elements with the extracted data
+                const userPhoto = document.getElementById('userPhoto');
+                userPhoto.src = photoUrl;
+
+                const followersElement = document.getElementById('followersCount');
+                followersElement.textContent = `Followers: ${followersCount}`;
+
+                const repositoriesElement = document.getElementById('repositoriesCount');
+                repositoriesElement.textContent = `Repositories: ${repositoriesCount}`;
+            }
+        }
+
+        xhr.send();// open will call now 
+</script>
+</html>
