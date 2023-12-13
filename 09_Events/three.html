@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Code with pranav</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+
+<script>
+    const startButton = document.getElementById('start');
+        const stopButton = document.getElementById('stop');
+        let intervalId;  // Variable to store the interval ID
+
+        function startInterval() {
+            // Start the interval and store the interval ID
+            intervalId = setInterval(function() {
+                console.log('Interval is running...');  
+            }, 1000);  // Adjust the interval time as needed
+        }
+
+        function stopInterval() {
+            // Stop the interval using the stored interval ID
+            clearInterval(intervalId);
+        }
+
+        startButton.addEventListener('click', startInterval);
+        stopButton.addEventListener('click', stopInterval);
+
+
+//    const sayDate=setInterval(function(str){
+//     console.log("Pranav",Date.now());
+//    },1000)
+//    const intervalId = setInterval(sayDate,9000,"hi")
+
+//    clearInterval(intervalId)
+
+
+
+
+</script>
+</html>
